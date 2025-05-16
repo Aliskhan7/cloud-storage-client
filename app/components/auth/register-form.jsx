@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const AuthPage = () => {
+const RegisterForm = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
+
+export default RegisterForm;
