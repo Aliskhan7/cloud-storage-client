@@ -1,17 +1,15 @@
 import axios from "@/core/axios";
-import { FileItem } from "@/api/dto/files.dto";
 
-type FileType = "all" | "photos" | "trash";
 
-export const getAll = async (type: FileType = "all"): Promise<FileItem[]> => {
+export const getAll = async (type = "all") => {
     return (await axios.get("/files?type=" + type)).data;
 };
 
-export const remove = (ids: number[]): Promise<void> => {
+export const remove = (ids) => {
     return axios.delete("/files?ids=" + ids);
 };
 
-export const uploadFile = async (options: any) => {
+export const uploadFile = async (options) => {
     const { onSuccess, onError, file, onProgress } = options;
 
     const formData = new FormData();
@@ -19,7 +17,7 @@ export const uploadFile = async (options: any) => {
 
     const config = {
         headers: { "Content-Type": "multipart/form-data" },
-        onProgress: (event: ProgressEvent) => {
+        onProgress: (event) => {
             onProgress({ percent: (event.loaded / event.total) * 100 });
         },
     };
