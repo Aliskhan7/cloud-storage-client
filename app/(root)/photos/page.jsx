@@ -4,7 +4,6 @@ import React from "react";
 import { Layout } from "@/layouts/Layout";
 
 import * as Api from "@/api";
-import { FileItem } from "@/api/dto/files.dto";
 import { DashboardLayout } from "@/layouts/DashboardLayout";
 import { Files } from "@/modules/Files";
 
@@ -38,7 +37,6 @@ export const getServerSideProps = async (ctx) => {
             },
         };
     } catch (err) {
-        console.log(err);
         return {
             props: { items: [] },
         };
