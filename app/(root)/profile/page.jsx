@@ -1,6 +1,4 @@
 
-import { GetServerSidePropsContext, NextPage } from "next";
-import { User } from "@/api/dto/auth.dto";
 import { Button } from "antd";
 
 import styles from "@/styles/Profile.module.scss";
