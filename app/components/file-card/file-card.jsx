@@ -6,12 +6,7 @@ import { isImage } from "@/utils/isImage";
 import { getColorByExtension } from "@/utils/getColorByExtension";
 import { FileTextOutlined } from "@ant-design/icons";
 
-interface FileCardProps {
-  filename: string;
-  originalName: string;
-}
-
-export const FileCard: React.FC<FileCardProps> = ({
+export const FileCard = ({
   originalName,
   filename,
 }) => {

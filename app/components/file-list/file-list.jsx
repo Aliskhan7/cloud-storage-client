@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./FileList.module.scss";
-import { FileItem } from "@/api/dto/files.dto";
 import { FileCard } from "@/components/FileCard";
 import Selecto from "react-selecto";
 
