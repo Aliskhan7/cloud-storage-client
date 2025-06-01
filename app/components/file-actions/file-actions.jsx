@@ -3,7 +3,7 @@ import styles from "./FileActions.module.scss";
 import { Button, Popconfirm } from "antd";
 
 
-export const FileActions: React = ({
+export const FileActions = ({
                                                             onClickRemove,
                                                             onClickShare,
                                                             isActive,
